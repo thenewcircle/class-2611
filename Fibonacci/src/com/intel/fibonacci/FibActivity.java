@@ -23,22 +23,22 @@ public class FibActivity extends Activity {
     public void onButtonClick(View v) {
     		long n = Long.parseLong( input.getText().toString() );
 
-/*
+
     		// Java Recursive
     		long start = System.currentTimeMillis();
     		long resultJ = FibLib.fibJ(n);
     		long timeJ = System.currentTimeMillis() - start;
-    		output.append( String.format("\nfibJ(%d)=%d (%d ms)", n, resultJ, timeJ) );
+    		output.setText( String.format("\nfibJ(%d)=%d (%d ms)", n, resultJ, timeJ) );
 
     		// Native Recursive
     		start = System.currentTimeMillis();
     		long resultN = FibLib.fibN(n);
     		long timeN = System.currentTimeMillis() - start;
     		output.append( String.format("\nfibN(%d)=%d (%d ms)", n, resultN, timeN) );
-*/
+
     		
     		// Java Iterative
-    		long start = System.nanoTime();
+    		start = System.nanoTime();
     		long resultJI = FibLib.fibJI(n);
     		long timeJI = System.nanoTime() - start;
     		output.setText( String.format("\nfibJI(%d)=%d (%d ms)", n, resultJI, timeJI) );
