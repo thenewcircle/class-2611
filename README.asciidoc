@@ -1,0 +1,8 @@
+Intel Android Internals
+=======================
+
+Videos to Watch:
+----------------
+
+* http://mrkn.co/f/1178[Architecting Android Apps]
+* http://www.youtube.com/watch?v=Q8m9sHdyXnE[For Butter or Worse]
