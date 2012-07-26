@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.intel.fibcommon.IFibService;
+import com.intel.fibcommon.Request;
 
 public class FibActivity extends Activity {
 	EditText input;
@@ -44,31 +45,30 @@ public class FibActivity extends Activity {
     public void onButtonClick(View v) throws RemoteException {
     		long n = Long.parseLong( input.getText().toString() );
 
-
     		// Java Recursive
     		long start = System.currentTimeMillis();
-    		long resultJ = fibService.fibJ(n);
+    		long resultJ = fibService.fib( new Request(1, n) );
     		long timeJ = System.currentTimeMillis() - start;
     		output.setText( String.format("\nfibJ(%d)=%d (%d ms)", n, resultJ, timeJ) );
 
     		// Native Recursive
     		start = System.currentTimeMillis();
-    		long resultN = fibService.fibN(n);
+    		long resultN = fibService.fib( new Request(2, n) );
     		long timeN = System.currentTimeMillis() - start;
     		output.append( String.format("\nfibN(%d)=%d (%d ms)", n, resultN, timeN) );
 
     		
     		// Java Iterative
     		start = System.nanoTime();
-    		long resultJI = fibService.fibJI(n);
+    		long resultJI = fibService.fib( new Request(3, n) );
     		long timeJI = System.nanoTime() - start;
-    		output.append( String.format("\nfibJI(%d)=%d (%d ms)", n, resultJI, timeJI) );
+    		output.append( String.format("\nfibJI(%d)=%d (%d ns)", n, resultJI, timeJI) );
 
     		// Native Iterative
     		start = System.nanoTime();
-    		long resultNI = fibService.fibNI(n);
+    		long resultNI = fibService.fib( new Request(4, n) );
     		long timeNI = System.nanoTime() - start;
-    		output.append( String.format("\nfibNI(%d)=%d (%d ms)", n, resultNI, timeNI) );
+    		output.append( String.format("\nfibNI(%d)=%d (%d ns)", n, resultNI, timeNI) );
 
     }
     
