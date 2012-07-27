@@ -6,4 +6,5 @@ Videos to Watch:
 
 * http://mrkn.co/f/595[Intro to Eclipse]
 * http://mrkn.co/f/1178[Architecting Android Apps]
-* http://www.youtube.com/watch?v=Q8m9sHdyXnE[For Butter or Worse]
+* http://www.youtube.com/watch?v=Q8m9sHdyXnE[For Butter or Worse - video]
+* https://dl.dropbox.com/u/16714463/Google%20IO%202012/For%20Butter%20or%20Worse%20%28Notes%29.pdf[For Butter or Worse - slides]
