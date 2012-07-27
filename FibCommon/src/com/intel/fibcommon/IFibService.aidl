@@ -1,6 +1,8 @@
 package com.intel.fibcommon;
 
 import com.intel.fibcommon.Request;
+import com.intel.fibcommon.IFibListener;
+
 
 interface IFibService {
 	long fibJ(long n);
@@ -9,4 +11,5 @@ interface IFibService {
 	long fibNI(long n);
 	
 	long fib(in Request req);
+	oneway void asyncFib(in Request req, IFibListener listener);
 }
